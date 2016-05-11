@@ -1,0 +1,26 @@
+<!--
+NB: use colors="false" on windows, else you'll get control chars printing like ←[41;37mF←[0m←[31;1mE←[
+Or instal ANSICON: http://softkube.com/blog/ansi-command-line-colors-under-windows
+-->
+<phpunit
+    bootstrap="vendor/autoload.php"
+    colors="true"
+    stopOnError="true"
+    strict="true"
+    backupGlobals="false"
+>
+    <testsuites>
+        <testsuite name="JenkinsDemo">
+            <Directory suffix=".php">/tests/</Directory>
+        </testsuite>
+    </testsuites>
+	
+	<php>
+		<env name="APP_URL" value="http://127.0.0.1/jenkinsdemo"/>
+		<env name="BROWSER" value="firefox"/>
+		<env name="SELENIUM_SERVER_IP" value="127.0.0.1"/>
+		<env name="SELENIUM_SERVER_PORT" value="4444"/>
+		<env name="SELENIUM_SERVER_SCREENSHOT_URL" value="http://127.0.0.1/screenshots/"/>
+		<env name="SELENIUM_SERVER_SCREENSHOT_FOLDER" value="C:/xampp/htdocs/screenshots/"/>
+	</php>
+</phpunit>
