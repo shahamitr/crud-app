@@ -19,16 +19,19 @@ class sampleTest extends PHPUnit_Extensions_Selenium2TestCase
 	 */	
 	public function TC1()
 	{
-		$url = "http://127.0.0.1/jenkinsdemo";
-		
-		$this->url($url);
+		$this->url(APP_URL);
 		
 		$this->assertEquals("PHP - Jenkins demo", $this->title());
 	}
 	
+	/**
+     * Sample Test case
+     *
+	 * @test
+	 */	
 	public function tearDown()
 	{
-		$this->stop();
+		$this->url("http://".SELENIUM_SERVER_IP."/selenium-server/driver/?cmd=shutDownSeleniumServer");
 	}
 }
 ?>
