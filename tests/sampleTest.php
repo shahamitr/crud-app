@@ -2,11 +2,6 @@
 
 class sampleTest extends PHPUnit_Extensions_Selenium2TestCase
 {
-	/**
-     * Sample Test case
-     *
-	 * @test
-	 */	
 	public function setUp()
 	{
 		$this->screenshotPath = getenv('SELENIUM_SERVER_SCREENSHOT_FOLDER');
