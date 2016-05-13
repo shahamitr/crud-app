@@ -2,6 +2,15 @@
 
 class sampleTest extends PHPUnit_Extensions_Selenium2TestCase
 {
+	public function setUp()
+	{
+		$this->screenshotPath = getenv('SELENIUM_SERVER_SCREENSHOT_FOLDER');
+		$this->screenshotUrl = getenv('SELENIUM_SERVER_SCREENSHOT_URL');
+		$this->setPort(intval(getenv('SELENIUM_SERVER_PORT')));
+		$this->setHost(getenv('SELENIUM_SERVER_IP'));
+		$this->setBrowser(getenv('BROWSER'));
+		$this->setBrowserUrl(getenv('APP_URL'));
+	}
 	/**
      * Sample Test case
      *
