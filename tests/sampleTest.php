@@ -6,10 +6,10 @@ class sampleTest extends PHPUnit_Extensions_Selenium2TestCase
 	{
 		$this->screenshotPath = getenv('SELENIUM_SERVER_SCREENSHOT_FOLDER');
 		$this->screenshotUrl = getenv('SELENIUM_SERVER_SCREENSHOT_URL');
-		$this->setPort(intval(getenv('SELENIUM_SERVER_PORT')));
-		$this->setHost(getenv('SELENIUM_SERVER_IP'));
-		$this->setBrowser(getenv('BROWSER'));
-		$this->setBrowserUrl(getenv('APP_URL'));
+		$this->Port = (intval(getenv('SELENIUM_SERVER_PORT')));
+		$this->Host = getenv('SELENIUM_SERVER_IP');
+		$this->Browser = getenv('BROWSER');
+		$this->BrowserUrl = getenv('APP_URL');
 	}
 	
 	/**
@@ -19,7 +19,7 @@ class sampleTest extends PHPUnit_Extensions_Selenium2TestCase
 	 */	
 	public function TC1()
 	{
-		$this->url(APP_URL);
+		$this->url($this->BrowserUrl);
 		
 		$this->assertEquals("PHP - Jenkins demo", $this->title());
 	}
