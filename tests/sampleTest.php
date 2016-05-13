@@ -19,7 +19,7 @@ class sampleTest extends PHPUnit_Extensions_Selenium2TestCase
 	public function TC1()
 	{
 		$this->url(getenv('APP_URL'));
-		
+		$this->timeouts()->implicitWait(6000);
 		$this->assertEquals("PHP - Jenkins demo", $this->title());
 	}
 	
