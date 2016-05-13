@@ -2,16 +2,6 @@
 
 class sampleTest extends PHPUnit_Extensions_Selenium2TestCase
 {
-	public function setUp()
-	{
-		$this->screenshotPath = getenv('SELENIUM_SERVER_SCREENSHOT_FOLDER');
-		$this->screenshotUrl = getenv('SELENIUM_SERVER_SCREENSHOT_URL');
-		$this->Port = (intval(getenv('SELENIUM_SERVER_PORT')));
-		$this->Host = getenv('SELENIUM_SERVER_IP');
-		$this->Browser = getenv('BROWSER');
-		$this->BrowserUrl = getenv('APP_URL');
-	}
-	
 	/**
      * Sample Test case
      *
@@ -31,7 +21,7 @@ class sampleTest extends PHPUnit_Extensions_Selenium2TestCase
 	 */	
 	public function tearDown()
 	{
-		$this->url("http://".SELENIUM_SERVER_IP."/selenium-server/driver/?cmd=shutDownSeleniumServer");
+		$this->url("http://".getenv('SELENIUM_SERVER_IP').":".getenv('SELENIUM_SERVER_PORT')."/selenium-server/driver/?cmd=shutDownSeleniumServer");
 	}
 }
 ?>
