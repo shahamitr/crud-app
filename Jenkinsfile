@@ -32,7 +32,8 @@ def initialConfiguration(){
 
 def checkoutRepo(repoUrl){
 	try {
-		checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '6f88d131-fc36-4652-89f5-faae3c8ea1a5', url: repoUrl]]])
+		//checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '6f88d131-fc36-4652-89f5-faae3c8ea1a5', url: repoUrl]]])
+		checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CloneOption', depth: 0, noTags: true, reference: '', shallow: true]], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '6f88d131-fc36-4652-89f5-faae3c8ea1a5', url: repoUrl]]])
 	} catch (exception) {
 		sendMail("Checkout failure", defaultMsg + "${exception}", mailList)
 		error "Checkout failed: "${exception}""
