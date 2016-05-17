@@ -1,7 +1,7 @@
 <?php
 class Database 
 {
-	private static $dbName = 'crud_app' ; 
+	private static $dbName = 'crud_application' ; 
 	private static $dbHost = 'localhost' ;
 	private static $dbUsername = 'root';
 	private static $dbUserPassword = '';
