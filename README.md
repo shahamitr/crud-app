@@ -41,7 +41,7 @@ OR
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marker-animate-unobtrusive/0.2.8/SlidingMarker.min.js"></script>
 ```
     
-3.include the files of the module in your app, as the component of the library is decoupled in different files, so the files 
+3.include the files of the module in your app, as the component of the library is decoupled in different files, so we need to include all files of the module as mentioned below. 
     
 ```html
 <script src="scripts/common/map/google-maps-animation.module.js" type="text/javascript"></script>
@@ -58,7 +58,7 @@ angular.module('myApp', ['googleMaps.module'])
     
 5.Library has exposed all the function which are required to start animation, stop animation, adjust animation upon geting real time lat/long.
 
-    1) create and object of googleMaps.module and initialize map.
+    1) create an object of googleMaps.module and initialize map.
     2) then create marker on the map for place A and for place B.
     3) then start animation.
     4) depending upon any condition, you can stop the animation and do teardown activity.
