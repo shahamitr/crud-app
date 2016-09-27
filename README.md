@@ -62,7 +62,7 @@ angular.module('myApp', ['googleMaps.module'])
 3) then start animation.
 4) depending upon any condition, you can stop the animation and do teardown activity.
 
-#### init google map:
+#### init google map animation:
 
 ```js
 var googleMap = new googleMaps.module();
@@ -70,7 +70,7 @@ googleMap.showMap();
 googleMap.createMarker();
 ```
 
-#### execute google map:
+#### execute google map animation:
 
 ```js
 googleMap.startProviderAnimation();
@@ -83,7 +83,7 @@ googleMap.calculateETA(srcLat, srcLgt, destinationLat, destinationLgt);
 //Function will calculate and returns the google object in case of success and will return error. call to this function is optional if you want to calculate ETA and want to display it you can call it and utilize the response.
 ```
 
-#### teardown google map:
+#### teardown google map animation:
 ```js
 googleMap.resetMapConfig();
 //reset map config variable by calling this function
