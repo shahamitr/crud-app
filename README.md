@@ -73,8 +73,6 @@ angular.module('myApp', ['googleMaps.module'])
 
 ```js
 var googleMap = new googleMaps.module();
-googleMap.showMap();
-googleMap.createMarker();
 
 //e.g.
 //googleMap.showMap(mapWrapper, options, isUnique);
@@ -83,7 +81,11 @@ googleMap.showMap(document.getElementById('map'),undefined,true);
 //in second param we need to pass map options
 //in third param we need to pass weather we are creating new map (isUnique)
 
-
+//e.g.
+//googleMap.createMarker(markerOptions,isUnique);
+googleMap.createMarker(markerOptions,true);
+//where in, first we need to pass entire object of lat long {latitude:72,longitude:23,details:other_details}
+//in second param we need to pass marker type (we are creating driver and customer marker for our app) if we want to create driver marker we will pass it as true.
 ```
 
 #### execute google map animation:
