@@ -1,6 +1,14 @@
 google-map-animation
 ====================
-The idea is simple: We need to do animation between two place on google map, respecting the estimated time and the route provided from the google direction api.
+The idea is simple: We need to do animation between two place on google map, respecting the estimated time and the route provided from the google direction api. The module takes care of following things.
+
+```html
+<ul>
+    <li>On road plotting of marker</li>
+    <li>Smooth Animation</li>
+    <li>Animation would always respect estimated time returned by google direction api.</li>
+</ul>
+```
 
 This module can be simply include it in your app, and by configuring and injecting it you can make it working.
 
