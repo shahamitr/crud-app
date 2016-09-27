@@ -113,4 +113,4 @@ googleMap.cancelTimer();
 6.That's it -- you're done!
 
 ## More about google direction
-<a href="https://developers.google.com/maps/documentation/directions/">Google Direction API</a>
+<a target="_blank" href="https://developers.google.com/maps/documentation/directions/">Google Direction API</a>
