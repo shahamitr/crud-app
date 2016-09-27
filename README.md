@@ -7,7 +7,7 @@ This module can be simply include it in your app, and by configuring and injecti
 **Requirements:** AngularJS v1.4.11+
 
 ## Usage:
-1. include all the dependencies which are needed to make animation work, following component and libraries are needed as pre-r
+1. include all the dependencies which are needed to make animation work, following component and libraries are needed as pre-requisite.
     
     #### via bower:
     ```
@@ -33,14 +33,14 @@ This module can be simply include it in your app, and by configuring and injecti
     ```
     ***NOTE: epoly library is not available on node package manager, so you need to install it from bower only.
     
-3. include required library from the CDN, Sliding marker and Marker animate. Marker animate converts all the google map marker and make it capable of sliding on google map.
+2. include required library from the CDN, Sliding marker and Marker animate. Marker animate converts all the google map marker and make it capable of sliding on google map.
     
     ```html
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marker-animate-unobtrusive/0.2.8/vendor/markerAnimate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marker-animate-unobtrusive/0.2.8/SlidingMarker.min.js"></script>
     ```
     
-4. include the files of the module in your app, as the component of the library is decoupled in different files, so the files 
+3. include the files of the module in your app, as the component of the library is decoupled in different files, so the files 
     
     ```html
     <script src="scripts/common/map/google-maps-animation.module.js" type="text/javascript"></script>
@@ -49,13 +49,13 @@ This module can be simply include it in your app, and by configuring and injecti
     <script src="scripts/common/map/google-maps-library.js" type="text/javascript"></script>
     ```
     
-3. Now its the time to inject the dependency to your all. see reference code below.
+4. Now its the time to inject the dependency to your all. see reference code below.
     
     ```js
     angular.module('myApp', ['googleMaps.module'])
     ```
     
-4. Library has exposed all the function which are required to start animation, stop animation, adjust animation upon geting real time lat/long.
+5. Library has exposed all the function which are required to start animation, stop animation, adjust animation upon geting real time lat/long.
 
     1) create and object of googleMaps.module and initialize map.
     2) then create marker on the map for place A and for place B.
@@ -89,7 +89,7 @@ This module can be simply include it in your app, and by configuring and injecti
     googleMap.cancelTimer();
     ```
     
-5. That's it -- you're done!
+6. That's it -- you're done!
 #### via bower:
 ```
 $ bower install angular-loading-bar
