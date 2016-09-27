@@ -114,3 +114,7 @@ googleMap.cancelTimer();
 
 ## More about google direction
 <a target="_blank" href="https://developers.google.com/maps/documentation/directions/">Google Direction API</a>
+
+## License
+
+Copyright (c) 2016 Urgent.ly. http://geturgently.com
