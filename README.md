@@ -7,6 +7,7 @@ This module can be simply include it in your app, and by configuring and injecti
 **Requirements:** AngularJS v1.4.11+
 
 ## Usage:
+
 1. include all the dependencies which are needed to make animation work, following component and libraries are needed as pre-requisite.
     
 #### via bower:
@@ -32,7 +33,7 @@ OR
 <script src="bower_components/jquery-easing/jquery.easing.min.js"></script>
 ```
 ***NOTE: epoly library is not available on node package manager, so you need to install it from bower only.
-    
+
 2. include required library from the CDN, Sliding marker and Marker animate. Marker animate converts all the google map marker and make it capable of sliding on google map.
 
 ```html
@@ -91,7 +92,7 @@ googleMap.resetMapConfig();
 googleMap.cancelTimer();
 //cancel the current running animation. 
 ```
-    
+
 6. That's it -- you're done!
 
 ## More about google direction
