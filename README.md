@@ -8,7 +8,7 @@ The idea is simple: We need to do animation between two place on google map, res
     <li>Animation would always respect estimated time returned by google direction api.</li>
 </ul>
 
-This module can be simply include it in your app, and by configuring and injecting it you can make it working.
+This module can be simply included in your app and by configuring and injecting it you can make it working for you.
 
 **Requirements:** AngularJS v1.4.11+
 
