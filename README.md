@@ -75,6 +75,15 @@ angular.module('myApp', ['googleMaps.module'])
 var googleMap = new googleMaps.module();
 googleMap.showMap();
 googleMap.createMarker();
+
+//e.g.
+//googleMap.showMap(mapWrapper, options, isUnique);
+googleMap.showMap(document.getElementById('map'),undefined,true);
+//where in, first we need to pass element id where we want to show map
+//in second param we need to pass map options
+//in third param we need to pass weather we are creating new map (isUnique)
+
+
 ```
 
 #### execute google map animation:
